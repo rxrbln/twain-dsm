@@ -21,18 +21,18 @@
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* TWAIN_DSM_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAIN_DSM_Prefix.pch; sourceTree = "<group>"; };
-		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* TWAIN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TWAIN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A77F9D4C1B551F2E00E0293D /* apps.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = apps.cpp; path = ../src/apps.cpp; sourceTree = SOURCE_ROOT; };
-		A77F9D4D1B551F2E00E0293D /* dsm.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = dsm.cpp; path = ../src/dsm.cpp; sourceTree = SOURCE_ROOT; };
-		A77F9D4E1B551F2E00E0293D /* dsm.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsm.def; path = ../src/dsm.def; sourceTree = SOURCE_ROOT; };
-		A77F9D4F1B551F2E00E0293D /* dsm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dsm.h; path = ../src/dsm.h; sourceTree = SOURCE_ROOT; };
-		A77F9D501B551F2E00E0293D /* dsm.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsm.rc; path = ../src/dsm.rc; sourceTree = SOURCE_ROOT; };
-		A77F9D511B551F2E00E0293D /* hook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hook.cpp; path = ../src/hook.cpp; sourceTree = SOURCE_ROOT; };
-		A77F9D521B551F2E00E0293D /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = ../src/log.cpp; sourceTree = SOURCE_ROOT; };
-		A77F9D531B551F2E00E0293D /* readme.doc */ = {isa = PBXFileReference; lastKnownFileType = file; name = readme.doc; path = ../src/readme.doc; sourceTree = SOURCE_ROOT; };
-		A77F9D541B551F2E00E0293D /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resource.h; path = ../src/resource.h; sourceTree = SOURCE_ROOT; };
-		A77F9D551B551F2E00E0293D /* twain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = twain.h; path = ../src/twain.h; sourceTree = SOURCE_ROOT; };
+		A77F9D4C1B551F2E00E0293D /* apps.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = apps.cpp; path = src/apps.cpp; sourceTree = "<group>"; };
+		A77F9D4D1B551F2E00E0293D /* dsm.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = dsm.cpp; path = src/dsm.cpp; sourceTree = "<group>"; };
+		A77F9D4E1B551F2E00E0293D /* dsm.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsm.def; path = src/dsm.def; sourceTree = "<group>"; };
+		A77F9D4F1B551F2E00E0293D /* dsm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dsm.h; path = src/dsm.h; sourceTree = "<group>"; };
+		A77F9D501B551F2E00E0293D /* dsm.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsm.rc; path = src/dsm.rc; sourceTree = "<group>"; };
+		A77F9D511B551F2E00E0293D /* hook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hook.cpp; path = src/hook.cpp; sourceTree = "<group>"; };
+		A77F9D521B551F2E00E0293D /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = src/log.cpp; sourceTree = "<group>"; };
+		A77F9D531B551F2E00E0293D /* readme.doc */ = {isa = PBXFileReference; lastKnownFileType = file; name = readme.doc; path = src/readme.doc; sourceTree = "<group>"; };
+		A77F9D541B551F2E00E0293D /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resource.h; path = src/resource.h; sourceTree = "<group>"; };
+		A77F9D551B551F2E00E0293D /* twain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = twain.h; path = src/twain.h; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +89,7 @@
 		089C1665FE841158C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				8DC2EF5A0486A6940098B216 /* InfoPlist.strings */,
 				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
