@@ -3857,6 +3857,10 @@ void PASCAL DSM_MemUnlock (TW_HANDLE _handle)
 void* DSM_LoadFunction(void* _pHandle, const char* _pszSymbol)
 {
   void* pRet = 0;
+#if (TWNDSM_OS == TWNDSM_OS_MACOSX)
+  pRet = CFBundleGetFunctionPointerForName((CFBundleRef)_pHandle,
+					   CFStringCreateWithCStringNoCopy(0, _pszSymbol, kCFStringEncodingUTF8, 0));
+#else
 
   #if (TWNDSM_CMP == TWNDSM_CMP_GNUGPP)
     dlerror();    /* Clear any existing error */
@@ -3874,6 +3878,6 @@ void* DSM_LoadFunction(void* _pHandle, const char* _pszSymbol)
     pRet = 0;
   }
 #endif
-
+#endif
   return pRet;
 }
