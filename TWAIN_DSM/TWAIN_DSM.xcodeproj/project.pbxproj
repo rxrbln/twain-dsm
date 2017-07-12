@@ -22,7 +22,7 @@
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* TWAIN_DSM_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAIN_DSM_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* TWAIN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TWAIN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2EF5B0486A6940098B216 /* TWAINDSM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TWAINDSM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77F9D4C1B551F2E00E0293D /* apps.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = apps.cpp; path = src/apps.cpp; sourceTree = "<group>"; };
 		A77F9D4D1B551F2E00E0293D /* dsm.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = dsm.cpp; path = src/dsm.cpp; sourceTree = "<group>"; };
 		A77F9D4E1B551F2E00E0293D /* dsm.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsm.def; path = src/dsm.def; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* TWAIN.framework */,
+				8DC2EF5B0486A6940098B216 /* TWAINDSM.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8DC2EF4F0486A6940098B216 /* TWAIN2 */ = {
+		8DC2EF4F0486A6940098B216 /* TWAINDSM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "TWAIN2" */;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "TWAINDSM" */;
 			buildPhases = (
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
@@ -140,10 +140,10 @@
 			);
 			dependencies = (
 			);
-			name = TWAIN2;
+			name = TWAINDSM;
 			productInstallPath = "$(HOME)/Library/Frameworks";
 			productName = TWAIN_DSM;
-			productReference = 8DC2EF5B0486A6940098B216 /* TWAIN.framework */;
+			productReference = 8DC2EF5B0486A6940098B216 /* TWAINDSM.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +166,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DC2EF4F0486A6940098B216 /* TWAIN2 */,
+				8DC2EF4F0486A6940098B216 /* TWAINDSM */,
 			);
 		};
 /* End PBXProject section */
@@ -224,7 +224,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = TWAIN;
+				PRODUCT_NAME = TWAINDSM;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -242,7 +242,7 @@
 				GCC_PREFIX_HEADER = TWAIN_DSM_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				PRODUCT_NAME = TWAIN_DSM;
+				PRODUCT_NAME = TWAINDSM;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -276,7 +276,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "TWAIN2" */ = {
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "TWAINDSM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91AE08733DA50010E9CD /* Debug */,
