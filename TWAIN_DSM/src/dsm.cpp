@@ -574,7 +574,7 @@ TW_UINT16 CTwnDsm::DSM_Entry(TW_IDENTITY  *_pOrigin,
             // For some reason we have no pointer to the dsentry function...
             else
             {
-			  kLOG((kLOGERR,"Unable to find driver, check your AppId and DsId values..."));
+              kLOG((kLOGERR,"Unable to find driver, check your AppId and DsId values..."));
               pod.m_ptwndsmapps->AppSetConditionCode(pAppId,TWCC_OPERATIONERROR);
               kLOG((kLOGERR,"DS_Entry is null...%ld",(TWID_T)pAppId->Id));
               rcDSM = TWRC_FAILURE;
@@ -3749,8 +3749,18 @@ TW_HANDLE PASCAL DSM_MemAllocate (TW_UINT32 _bytes)
       return (TW_HANDLE)NULL;
   }
   return handle;
+  
+  // MacOS
+  #elif (TWNDSM_OS == TWNDSM_OS_MACOSX)
+    handle = (TW_HANDLE)NewHandleClear(_bytes);
+  if (0 == handle)
+  {
+      kLOG((kLOGERR,"DSM_MemAllocate failed to allocate %ld bytes...",_bytes));
+      return (TW_HANDLE)NULL;
+  }
+  return handle;
 
-  // Linux/Mac
+  // Linux
   #elif (TWNDSM_CMP == TWNDSM_CMP_GNUGPP)
     handle = (TW_HANDLE)calloc(_bytes,1);
   if (0 == handle)
@@ -3784,6 +3794,10 @@ void PASCAL DSM_MemFree (TW_HANDLE _handle)
   // Windows...
   #if (TWNDSM_CMP == TWNDSM_CMP_VISUALCPP)
     ::GlobalFree(_handle);
+    
+  // MacOS
+  #elif (TWNDSM_OS == TWNDSM_OS_MACOSX)
+    DisposeHandle((Handle)_handle);
 
   // Linux...
   #elif (TWNDSM_CMP == TWNDSM_CMP_GNUGPP)
@@ -3815,6 +3829,10 @@ TW_MEMREF PASCAL DSM_MemLock (TW_HANDLE _handle)
   // this is a no-op for a GPTR, what they hey...
   #if (TWNDSM_CMP == TWNDSM_CMP_VISUALCPP)
     return (TW_MEMREF)::GlobalLock(_handle);
+
+  // MacOS
+  #elif (TWNDSM_OS == TWNDSM_OS_MACOSX)
+    return _handle ? *_handle : 0;
 
   // Linux...
   #elif (TWNDSM_CMP == TWNDSM_CMP_GNUGPP)
