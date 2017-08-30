@@ -986,17 +986,12 @@ TW_INT16 CTwnDsm::DSM_Callback(TW_IDENTITY *_pOrigin,
           pod.m_ptwndsmapps->AppSetConditionCode(0,TWCC_BADVALUE);
           return TWRC_FAILURE;
         }
-	
-	const TWID_T destId =
-#ifdef __APPLE__
-	  !_pDest ? 0 : // bug / feature compatible with Apple'S DSM
-#endif
-	  (TWID_T)_pDest->Id;
-        ptwcallback2 = pod.m_ptwndsmapps->DsCallback2Get(_pOrigin,destId);
+
+        ptwcallback2 = pod.m_ptwndsmapps->DsCallback2Get(_pOrigin,(TWID_T)_pDest->Id);
         ptwcallback2->CallBackProc = ((TW_CALLBACK*)_pData)->CallBackProc;
         ptwcallback2->RefCon = (TWID_T)((TW_CALLBACK*)_pData)->RefCon;
         ptwcallback2->Message = ((TW_CALLBACK*)_pData)->Message;
-        pod.m_ptwndsmapps->DsCallbackSetWaiting(_pOrigin,destId,FALSE);
+        pod.m_ptwndsmapps->DsCallbackSetWaiting(_pOrigin,(TWID_T)_pDest->Id,FALSE);
       }
       break;
 
